@@ -6,11 +6,11 @@ public class BOJ11022 {
         int n = input.nextInt();
         int result = 0;
 
-        for(int i=0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
             int num1 = input.nextInt();
             int num2 = input.nextInt();
             result = num1 + num2;
-            System.out.println("Case #" + (i+1) + ": " + num1 + " + " + num2 + " = " + result);
+            System.out.println("Case #" + (i + 1) + ": " + num1 + " + " + num2 + " = " + result);
         }
     }
 }
