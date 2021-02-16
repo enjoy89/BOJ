@@ -16,7 +16,7 @@ public class BOJ11650 {
             arr[i][0] = Integer.parseInt(st.nextToken());   // 다음 토큰을 반환
             arr[i][1] = Integer.parseInt(st.nextToken());
         }
-
+        // 2차원 배열 정렬
         // 0번째 요소가 같으면 1번째 요소끼리 비교한다.
         // 0번째 요소가 다르면 0번째 요소끼리 비교한다.
         Arrays.sort(arr, new Comparator<int[]>() {
