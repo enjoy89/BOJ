@@ -6,7 +6,7 @@ public class BOJ1157 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
-        int[] nums = new int[26];
+        int[] nums = new int[26];   // 대소문자 구분 없이 26개
         int max = -1;
         char result = '?';
 
@@ -14,10 +14,11 @@ public class BOJ1157 {
             nums[i] = -1;
         }
 
+        // 대소문자 상관 없이 배열의 인덱스는 0부터 시작한다.
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) >= 'a' && str.charAt(i) <= 'z') {
+            if (str.charAt(i) >= 'a' && str.charAt(i) <= 'z') {     // 소문자
                 nums[str.charAt(i) - 97]++;
-            } else {
+            } else {        // 대문자
                 nums[str.charAt(i) - 65]++;
             }
         }
