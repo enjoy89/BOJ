@@ -38,8 +38,8 @@ public class BOJ11399 {
             arr[i] = arr[i] + arr[i - 1];
         }
 
-        for (int i = 0; i < sort_arr.length; i++) {
-            sum += sort_arr[i];
+        for (int i : sort_arr) {
+            sum += i;
         }
         System.out.println(sum);
 
