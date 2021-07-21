@@ -33,6 +33,5 @@ public class BOJ9012 {
                 System.out.println("NO");
             }
         }
-
     }
 }
