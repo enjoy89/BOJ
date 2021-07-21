@@ -6,7 +6,7 @@ public class BOJ1065 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        int han = 0;
+        int han;
 
         if (N < 100) {
             han = N;
