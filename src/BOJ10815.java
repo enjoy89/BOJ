@@ -5,8 +5,8 @@ import java.util.Arrays;
 
 public class BOJ10815 {
     private static int[] get_card;
-    private static int[] test_card;
 
+    // 이진 탐색
     public static int BinarySearch(int target) {
         int left = 0;
         int right = get_card.length - 1;
@@ -38,7 +38,7 @@ public class BOJ10815 {
 
         int M = Integer.parseInt(br.readLine());
         String[] str2 = br.readLine().split(" ");
-        test_card = new int[M];
+        int[] test_card = new int[M];
 
         for (int i = 0; i < M; i++) {
             test_card[i] = Integer.parseInt(str2[i]);
