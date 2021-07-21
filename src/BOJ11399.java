@@ -3,10 +3,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class BOJ11399 {
-
     public static int[] Insertion_sort(int[] arr) {
         int temp;
-
         for (int i = 1; i < arr.length; i++) {
             int key = i;
             for (int j = i - 1; j >= 0; j--) {
@@ -32,16 +30,12 @@ public class BOJ11399 {
         }
 
         int[] sort_arr = Insertion_sort(arr);
-        int sum = 0;
+        int sum = sort_arr[0];
 
         for (int i = 1; i < sort_arr.length; i++) {
             arr[i] = arr[i] + arr[i - 1];
-        }
-
-        for (int i : sort_arr) {
-            sum += i;
+            sum += arr[i];
         }
         System.out.println(sum);
-
     }
 }
