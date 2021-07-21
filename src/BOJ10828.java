@@ -11,7 +11,6 @@ public class BOJ10828 {
     public static void push(int data) {
         stack[++top] = data;
         size++;
-
     }
 
     public static int pop() {
@@ -44,7 +43,6 @@ public class BOJ10828 {
 
     public static int size() {
         return size;
-
     }
 
     public static void main(String[] args) throws IOException {
