@@ -8,5 +8,6 @@ public class BOJ10757 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] arr = br.readLine().split(" ");
         System.out.println(new BigInteger(arr[0]).add(new BigInteger(arr[1])));
+
     }
 }
