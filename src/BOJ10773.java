@@ -18,8 +18,8 @@ public class BOJ10773 {
             }
         }
         int sum = 0;
-        for (int i : stack) {
-            sum += i;
+        while (!stack.isEmpty()) {
+            sum += stack.pop();
         }
         System.out.println(sum);
     }
