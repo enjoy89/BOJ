@@ -21,7 +21,6 @@ public class BOJ10828 {
             stack[top--] = 0;
             size--;
             return value;
-
         }
     }
 
