@@ -1,20 +1,16 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class BOJ10950 {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int t = input.nextInt();
-        int num1 = 0;
-        int num2 = 0;
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int T = Integer.parseInt(br.readLine());
 
-        for (int i = 0; i < t; i++) {
-            num1 = input.nextInt();
-            num2 = input.nextInt();
-            if (num1 <= 0 || num2 >= 10) {
-                System.out.println("잘못된 입력값임");
-                return;
-            }
-            System.out.println(num1 + num2);
+        for (int i = 0; i < T; i++) {
+            String[] nums = br.readLine().split(" ");
+            int result = Integer.parseInt(nums[0]) + Integer.parseInt(nums[1]);
+            System.out.println(result);
         }
     }
 }
