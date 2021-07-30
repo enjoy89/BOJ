@@ -17,7 +17,6 @@ public class BOJ10818 {
         int min = arr[0];
         int max = arr[0];
 
-        // 배열을 탐색하며 최솟값, 최댓값을 찾는다
         for (int i = 0; i < arr.length; i++) {
             if (min > arr[i]) {
                 min = arr[i];
