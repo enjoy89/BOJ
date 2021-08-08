@@ -8,7 +8,7 @@ public class BOJ2675 {
         int N = Integer.parseInt(br.readLine());
 
         for (int i = 0; i < N; i++) {
-            String[] str = br.readLine().split(" ");    // String 배열에 공백 기준으로 나눠 저장한다.
+            String[] str = br.readLine().split(" ");
             int R = Integer.parseInt(str[0]);
             String S = str[1];
 
