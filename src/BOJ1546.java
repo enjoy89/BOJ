@@ -1,15 +1,18 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class BOJ1546 {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int N = input.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+        String[] nums = br.readLine().split(" ");
         double[] arr = new double[N];
         double max = 0;
         double sum = 0;
 
-        for (int i = 0; i < N; i++) {
-            arr[i] = input.nextDouble();
+        for (int i = 0; i < nums.length; i++) {
+            arr[i] = Double.parseDouble(nums[i]);
             if (max < arr[i]) {
                 max = arr[i];
             }
