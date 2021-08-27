@@ -12,9 +12,6 @@ public class BOJ1924 {
         int sum = 0;
 
         for (int i = 1; i < month; i++) {
-            if (month == 1) {
-                break;
-            }
             sum += months[i];
         }
         sum += day;
