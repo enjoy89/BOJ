@@ -9,13 +9,10 @@ public class BOJ1110 {
         int cycle = 0;
         int next = N;
 
-        while(true) {
+        do {
             N = ((N % 10) * 10) + (((N / 10) + (N % 10)) % 10);
             cycle++;
-            if(next == N) {
-                break;
-            }
-        }
+        } while (next != N);
         System.out.println(cycle);
     }
 }

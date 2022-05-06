@@ -5,9 +5,9 @@ import java.io.InputStreamReader;
 public class BOJ10871 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] s = br.readLine().split(" ");
-        int num1 = Integer.parseInt(s[0]);
-        int num2 = Integer.parseInt(s[1]);
+        String[] str = br.readLine().split(" ");
+        int num1 = Integer.parseInt(str[0]);
+        int num2 = Integer.parseInt(str[1]);
 
         String[] arr = br.readLine().split(" ");
         for (int i = 0; i < num1; i++) {

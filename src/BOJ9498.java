@@ -17,4 +17,5 @@ public class BOJ9498 {
             System.out.println("F");
         }
     }
+
 }

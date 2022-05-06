@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class BOJ10872 {
-
     public static int factorial(int N) {
         if (N <= 1) {
             return 1;
@@ -17,6 +16,5 @@ public class BOJ10872 {
         int N = Integer.parseInt(br.readLine());
         int result = factorial(N);
         System.out.println(result);
-
     }
 }

@@ -13,4 +13,5 @@ public class BOJ1271 {
         System.out.println(a.divide(b));
         System.out.println(a.mod(b));
     }
+
 }

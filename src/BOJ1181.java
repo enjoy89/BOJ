@@ -7,7 +7,7 @@ public class BOJ1181 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        HashSet<String> set = new HashSet<>();  // 단어의 중복을 제거하기 위해 HashSet이용
+        HashSet<String> set = new HashSet<>();  // 단어의 중복을 제거하기 위해 HashSet 이용
 
         for (int i = 0; i < N; i++) {
             set.add(br.readLine());

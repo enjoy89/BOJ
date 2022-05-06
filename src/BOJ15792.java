@@ -9,6 +9,5 @@ public class BOJ15792 {
         String[] nums = br.readLine().split(" ", -1);
         System.out.println(new BigDecimal(nums[0]).divide(new BigDecimal(nums[1]), 1000, BigDecimal.ROUND_HALF_UP));
         br.close();
-
     }
 }

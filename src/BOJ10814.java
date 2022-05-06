@@ -25,11 +25,12 @@ public class BOJ10814 {
             }
         });
 
-        for (int i = 0; i < people.length; i++) {
+        for (String[] person : people) {
             for (int j = 0; j < 2; j++) {
-                System.out.print(people[i][j] + " ");
+                System.out.print(person[j] + " ");
             }
             System.out.println();
         }
+
     }
 }

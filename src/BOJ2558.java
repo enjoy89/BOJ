@@ -5,8 +5,6 @@ import java.io.InputStreamReader;
 public class BOJ2558 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int num1 = Integer.parseInt(br.readLine());
-        int num2 = Integer.parseInt(br.readLine());
-        System.out.println(num1 + num2);
+        System.out.println(Integer.parseInt(br.readLine()) + Integer.parseInt(br.readLine()));
     }
 }

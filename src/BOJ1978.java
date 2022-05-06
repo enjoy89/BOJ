@@ -15,14 +15,12 @@ public class BOJ1978 {
             nums[i] = Integer.parseInt(st.nextToken());     // 토큰을 하나씩 불러서 배열에 입력
         }
 
-        for (int i = 0; i < nums.length; i++) {
-            boolean isPrime = true;     // 소수인 경우 true, 아닐 경우 false
-            if (nums[i] == 1) {
-                isPrime = false;
-            }
-            for (int j = 2; j < nums[i]; j++) {
-                if (nums[i] % j == 0) {
+        for (int num : nums) {
+            boolean isPrime = num != 1;     // 소수인 경우 true, 아닐 경우 false
+            for (int j = 2; j < num; j++) {
+                if (num % j == 0) {
                     isPrime = false;
+                    break;
                 }
             }
             if (isPrime) {

@@ -3,37 +3,32 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BOJ10828 {
-    public static int[] stack;
-    public static int top;
-    public static int size;
+public class BOJ10845 {
 
-    public static void push(int data) {
-        stack[++top] = data;
+    private static int[] queue;
+    private static int Front = -1;
+    private static int Rear = -1;
+    private static int size = 0;
+
+    public static void push(int X) {
+        queue[++Rear] = X;
         size++;
     }
 
     public static int pop() {
-        if (size == 0) {
+        if (Front == Rear) {
             return -1;
         } else {
-            int value = stack[top];
-            stack[top--] = 0;
+            Front  = Front + 1;
+            int value = queue[Front];
+            queue[Front] = 0;
             size--;
             return value;
         }
     }
 
-    public static int top() {
-        if (size == 0) {
-            return -1;
-        } else {
-            return stack[top];
-        }
-    }
-
     public static int empty() {
-        if (size == 0) {
+        if(Front == Rear) {
             return 1;
         } else {
             return 0;
@@ -44,10 +39,26 @@ public class BOJ10828 {
         return size;
     }
 
+    public static int front() {
+        if(empty() == 1) {
+            return -1;
+        } else {
+            return queue[Front + 1];
+        }
+    }
+
+    public static int back() {
+        if(empty() == 1) {
+            return -1;
+        } else {
+            return queue[Rear];
+        }
+    }
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        stack = new int[N];
+        queue = new int[N];
         StringTokenizer st;
 
         for (int i = 0; i < N; i++) {
@@ -66,9 +77,11 @@ public class BOJ10828 {
                 case "empty":
                     System.out.println(empty());
                     break;
-                case "top":
-                    System.out.println(top());
+                case "front":
+                    System.out.println(front());
                     break;
+                case "back":
+                    System.out.println(back());
             }
         }
     }
