@@ -8,20 +8,20 @@ public class BOJ2839 {
         int N = Integer.parseInt(br.readLine());
         int count = 0;
 
-        while (true) {
-            // N이 5로 나눠지는 경우
-            if (N % 5 == 0) {
-                count += (N / 5);
-                System.out.println(count);
+        // 그리디 알고리즘 적용
+        // 봉지의 수는 최소, 5키로 봉지의 수가 최대가 되어야함
+        while(true) {
+            if(N % 5 == 0) {        // N이 5로 나누어 떨어지는 경우
+                count += (N / 5);   // count에 몫을 더해줌
                 break;
-            } else if (N < 0) {     // N이 음수가 나온다면 -1 출력
-                System.out.println(-1);
+            } else if(N < 0) {      // N에서 3을 계속 빼주고 있으므로
+                count = -1;         // N이 음수가 되어버린 경우 정확한 값을 구하지 못함
                 break;
             }
-            // N이 5로 안 나눠지는 경우
-            // N에서 3씩 빼면서 0이 되면 다시 첫 번째 if문으로 돌아가 count 출력
-            N -= 3;
-            count++;
+            N -= 3;                 // N이 5로 나누어 떨어지지도 않고, N이 0보다 크면 (일반적인 경우)
+            count++;                // 3키로 봉지를 사용했다고 치고 3을 빼고 count++ 함
         }
+        System.out.println(count);
+
     }
 }
