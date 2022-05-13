@@ -7,19 +7,21 @@ public class BOJ11399 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        int[] arr = new int[N];
         String[] str = br.readLine().split(" ");
+        int[] nums = new int[N];
 
         for (int i = 0; i < N; i++) {
-            arr[i] = Integer.parseInt(str[i]);
+            nums[i] = Integer.parseInt(str[i]);
         }
-        Arrays.sort(arr);
-        int sum = arr[0];
+        Arrays.sort(nums);
+        int temp = 0;
 
-        for (int i = 1; i < arr.length; i++) {
-            arr[i] = arr[i] + arr[i - 1];
-            sum += arr[i];
+        for (int i = 1; i < N; i++) {
+            nums[i] = nums[i - 1] + nums[i];
         }
-        System.out.println(sum);
+        for (int i = 0; i < N; i++) {
+            temp += nums[i];
+        }
+        System.out.println(temp);
     }
 }
